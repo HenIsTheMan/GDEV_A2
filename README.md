@@ -1,5 +1,7 @@
 ***** 193541T GDEV *****
 
+> ** Completion Time: 4 days **
+
 Game Controls:
 
 Esc - Exit programme
