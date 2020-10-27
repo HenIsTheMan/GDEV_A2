@@ -230,15 +230,6 @@ void App::Render(){
 	glBlitFramebuffer(0, 0, 2048, 2048, 0, 0, winWidth, winHeight, GL_DEPTH_BUFFER_BIT, GL_NEAREST);
 	glBindFramebuffer(GL_FRAMEBUFFER, 0);
 	scene.ForwardRender();
-
-	//glClear(GL_DEPTH_BUFFER_BIT);??
-	glViewport(0, 0, 2048, 2048);
-	glBindFramebuffer(GL_READ_FRAMEBUFFER, FBORefIDs[(int)FBO::GeoPass]);
-	glViewport(0, 0, winWidth, winHeight);
-	glBindFramebuffer(GL_DRAW_FRAMEBUFFER, 0);
-	glBlitFramebuffer(0, 0, 2048, 2048, 0, 0, winWidth, winHeight, GL_DEPTH_BUFFER_BIT, GL_NEAREST);
-	glBindFramebuffer(GL_FRAMEBUFFER, 0);
-	scene.ForwardRender();
 }
 
 void App::PostRender() const{
